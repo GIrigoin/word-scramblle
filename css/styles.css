@@ -50,6 +50,7 @@ body {
   background-image: url("../images/bg-guess-the-word.png");
   background-position: center center;
   background-size: auto 100vh;
+  background-repeat: no-repeat;
   overflow-x: hidden;
   padding: 4rem;
   display: flex;
@@ -130,6 +131,26 @@ body {
   color: var(--input-border-color);
   font-size: var(--button-text);
   font-weight: 600;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.inputs {
+  width: 2.75rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--input-border-color);
+  margin: 2px;
+  color: var(--input-color);
+  font-size: var(--medium-text);
+  text-align: center;
+  padding: 0.25rem;
+}
+.input-active {
+  border-color: var(--accent-color);
 }
 button {
   height: 2.25rem;
