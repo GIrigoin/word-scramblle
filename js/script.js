@@ -3,9 +3,7 @@ let scrambledWord = "";
 let tries = 0;
 let mistakes = [];
 let currentInputIndex = 0;
-const MAX_TRIES = 5; //starts at 0
-
-//random y reset: random genera otra palabra y reset resetea el juego para la misma. Entonces random usa reset para inicializar el juego. reset deberia recibir la palabra y el scramble, sino al resetear el scramble seria distinto
+const MAX_TRIES = 5;
 
 const scrambleWord = () => {
   let copyOfWord = word.split("");
@@ -26,7 +24,6 @@ const generateNewWord = async () => {
     const data = await response.json();
     word = data[0];
     scrambleWord();
-    // console.log(word, scrambledWord);
   } catch (error) {
     alert("Oops, something failed");
   }
@@ -132,8 +129,6 @@ const newGame = async () => {
   resetGame();
 };
 
-// generateNewWord();
-// drawNewTry();
 newGame();
 
 const randomButton = document.getElementById("random-button");
